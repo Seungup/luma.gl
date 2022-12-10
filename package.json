@@ -80,5 +80,6 @@
   ],
   "dependencies": {
     "@types/offscreencanvas": "^2019.6.4"
-  }
+  },
+  "packageManager": "yarn@3.3.0"
 }
