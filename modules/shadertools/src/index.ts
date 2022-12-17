@@ -10,10 +10,6 @@ export {assembleShaders} from './lib/shader-assembler/assemble-shaders';
 export {combineInjects} from './lib/shader-assembler/inject-shader';
 export {normalizeShaderModule} from './lib/shader-module/normalize-shader-module';
 
-// COMPILER LOG
-export type {CompilerMessage} from './lib/compiler-log/compiler-message';
-export {formatCompilerLog} from './lib/compiler-log/format-compiler-log';
-
 // Shader source introspection
 export {getShaderInfo} from './lib/glsl-utils/get-shader-info';
 export {
@@ -23,6 +19,11 @@ export {
   typeToChannelCount,
   convertToVec4
 } from './lib/glsl-utils/shader-utils';
+
+// TODO - experimental
+export {generateGLSLForModule, GLSLGenerationOptions} from './lib/generator/glsl/generate-glsl';
+export {generateWGSLForModule, WGSLGenerationOptions} from './lib/generator/wgsl/generate-wgsl';
+export {capitalize} from './lib/generator/utils/capitalize';
 
 // SHADER MODULES
 

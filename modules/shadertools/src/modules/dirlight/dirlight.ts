@@ -1,5 +1,6 @@
 // luma.gl, MIT license
 import type {NumberArray} from '../../types';
+import {ShaderModule} from '../../lib/shader-module/shader-module';
 import {project} from '../project/project';
 
 export type DirlightOptions = {
@@ -35,10 +36,13 @@ vec4 dirlight_filterColor(vec4 color) {
 /**
  * Cheap lighting - single directional light, single dot product, one uniform
  */
- export const dirlight = {
+ export const dirlight: ShaderModule = {
   name: 'dirlight',
+  dependencies: [project],
   // vs // TODO - reuse normal from geometry module
   fs,
-  getUniforms,
-  dependencies: [project]
+  uniformFormats: {
+    lightDirection: 'vec3<f32>',
+  },
+  getUniforms
 };

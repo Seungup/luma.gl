@@ -12,3 +12,6 @@ import './adapter/canvas-context.spec';
 
 // lib
 import './lib/uniform-buffer-layout.spec';
+
+// COMPILER LOG
+import './lib/compiler-log/format-compiler-log.spec';

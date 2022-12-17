@@ -19,7 +19,7 @@ export type {TextureProps, TextureData} from './adapter/resources/texture';
 export {default as Texture} from './adapter/resources/texture';
 export type {ExternalTextureProps} from './adapter/resources/external-texture';
 export {default as ExternalTexture} from './adapter/resources/external-texture';
-export type {ShaderProps, CompilerMessage} from './adapter/resources/shader';
+export type {ShaderProps} from './adapter/resources/shader';
 export {default as Shader} from './adapter/resources/shader';
 export type {SamplerProps, SamplerParameters} from './adapter/resources/sampler';
 export {default as Sampler} from './adapter/resources/sampler';
@@ -82,12 +82,16 @@ export type {
   VaryingBinding
 } from './adapter/types/shader-layout';
 
-export {default as UniformBufferLayout} from './lib/uniform-buffer-layout';
-export {default as UniformBlock} from './lib/uniform-block';
+export {UniformBufferLayout} from './lib/uniform-buffer-layout';
+export {UniformBlock} from './lib/uniform-block';
 
 // API UTILS
 export {decodeVertexFormat} from './adapter/utils/decode-vertex-format';
 export {decodeTextureFormat} from './adapter/utils/decode-texture-format';
+
+// COMPILER LOG
+export type {CompilerMessage} from './lib/compiler-log/compiler-message';
+export {formatCompilerLog} from './lib/compiler-log/format-compiler-log';
 
 // GENERAL TYPES
 export type {

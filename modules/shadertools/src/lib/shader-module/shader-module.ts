@@ -1,4 +1,5 @@
 // luma.gl, MIT license
+import {UniformFormat} from '../../types';
 import {PropType} from '../filters/prop-types';
 
 /** 
@@ -10,6 +11,7 @@ export type ShaderModule = {
   fs?: string;
   vs?: string;
   uniforms?: Record<string, PropType>;
+  uniformFormats?: Record<string, UniformFormat>;
   getUniforms?: any;
   defines?: Record<string, string | number>;
   inject?: Record<string, string | {injection: string; order: number;}>;

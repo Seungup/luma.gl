@@ -8,7 +8,7 @@ const ERR_ARGUMENT = 'UniformBufferLayout illegal argument';
  * Supports manual listing of uniforms
  * TODO - Parse shader and build a layout?
  */
-export default class UniformBufferLayout {
+export class UniformBufferLayout {
   readonly layout: Record<string, {offset: number, size: number, type: UniformDataType}> = {};
   readonly size: number = 0;
 
